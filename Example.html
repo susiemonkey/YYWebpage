@@ -3,36 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <title>Y&Y Communications - Case Studies</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery and jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ac2080; /* Primary color */
+            color: white;
+            text-align: center;
+            padding: 40px 0; /* Add padding for spacing */
+        }
+        .cases-section {
+            padding: 40px 0;
+        }
+        .cases-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: space-between; /* Distribute space */
+        }
+        .case-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            flex: 1 1 calc(30% - 20px); /* Each box occupies 30% width, minus spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transition effects */
+        }
+        .case-box:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hover effect */
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+        .case-image {
+            height: 200px; /* Set fixed height */
+            overflow: hidden; /* Hide overflow */
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Vertically center */
+            justify-content: center; /* Horizontally center */
+        }
+        .case-image img {
+            width: auto; /* Auto width */
+            height: 100%; /* Fill the height of the container */
+            object-fit: cover; /* Maintain aspect ratio and crop image */
+        }
+        .case-content {
+            padding-top: 15px; /* Space between image and content */
+        }
+        .accordion-section {
+            margin: 40px 0;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa; /* Background color */
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-          
-        <ul>
-            <li><a href="./index.html"><img src="./assets/logo.png"></a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./Example.html">Examples</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><button>Get In Touch</button></li>
-        </ul>
-  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">
+            <img src="./assets/logo.png" alt="logo" class="img-fluid" style="max-height: 40px; height: auto; width: auto;">
+            Y&Y Communications
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Example.html">Examples</a></li>
+                <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-   
+
     <!-- Case Studies Section -->
     <section class="cases-section">
-        <h1>Our Case Studies</h1>
+        <header>Our Case Studies</header>
         <p>We pride ourselves on delivering impactful results for our clients. Take a look at some of our key projects.</p>
         
         <div class="cases-container">
             <!-- Case 1 -->
             <div class="case-box">
                 <div class="case-image">
-                    <img src="./assets/coca-cola-emblem.jpg" alt="Case 1 Image">
+                    <img src="./assets/coca-cola-emblem.jpg" alt="Case 1 Image" class="img-fluid">
                 </div>
                 <div class="case-content">
                     <h2>Case 1: SEO Success Story</h2>
@@ -44,7 +110,7 @@
             <!-- Case 2 -->
             <div class="case-box">
                 <div class="case-image">
-                    <img src="./assets/ubereats logo.png" alt="Case 2 Image">
+                    <img src="./assets/ubereats logo.png" alt="Case 2 Image" class="img-fluid">
                 </div>
                 <div class="case-content">
                     <h2>Case 2: Paid Media Growth</h2>
@@ -56,7 +122,7 @@
             <!-- Case 3 -->
             <div class="case-box">
                 <div class="case-image">
-                    <img src="./assets/hungrypanda.webp" alt="Case 3 Image">
+                    <img src="./assets/hungrypanda.webp" alt="Case 3 Image" class="img-fluid">
                 </div>
                 <div class="case-content">
                     <h2>Case 3: B2B Cooperation Strategy</h2>
@@ -67,5 +133,40 @@
         </div>
     </section>
 
+    <!-- Accordion Section -->
+    <section class="accordion-section container mt-5">
+        <h2>Frequently Asked Questions</h2>
+        <div id="accordion">
+            <h3>What services do you offer?</h3>
+            <div>
+                <p>We offer a variety of services including SEO, Social Media Marketing, Paid Media, and B2B strategies.</p>
+            </div>
+            <h3>How can we get started?</h3>
+            <div>
+                <p>Contact us through our website or email, and we will set up a consultation to discuss your needs.</p>
+            </div>
+            <h3>What is your pricing model?</h3>
+            <div>
+                <p>Our pricing is based on the specific services you require. We offer customized packages to fit your budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function() {
+            $("#accordion").accordion({
+                collapsible: true,
+                active: false,
+                heightStyle: "content"
+            });
+        });
+    </script>
+    
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">Copyright 2024 © Y&Y Communications</p>
+        </div>
+    </footer>
 </body>
 </html>

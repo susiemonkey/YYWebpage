@@ -1,88 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="./index.html"><img src="./assets/logo.png"></a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./Example.html">Examples</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <!-- About Section -->
-    <section class="about-section">
-        <h1>About Us</h1>
-        <p>We are a dedicated team of digital marketing professionals focused on delivering innovative solutions to our clients. Our mission is to empower businesses to achieve their goals through strategic online marketing.</p>
+    <title>Y&Y Communications - About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Soft background color */
+            font-family: Arial, sans-serif; /* Clean font style */
+        }
 
-        <div class="values">
-            <h2>Our Values</h2>
-            <ul>
-                <li>Integrity</li>
-                <li>Innovation</li>
-                <li>Collaboration</li>
-                <li>Excellence</li>
-                <li>Customer Focus</li>
+        .about-section {
+            padding: 50px 0; /* Add padding around the section */
+            text-align: center; /* Center the text */
+        }
+
+        h1, h2 {
+            color: #b70b8c; /* Primary color for headings */
+            margin-bottom: 20px; /* Margin below headings */
+        }
+
+        .values ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove default padding */
+        }
+
+        .values li {
+            background-color: #b70b8c; /* Primary color for list items */
+            color: white; /* White text */
+            padding: 10px; /* Padding for better spacing */
+            margin: 5px 0; /* Margin for spacing between items */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .team-member {
+            margin-bottom: 30px; /* Margin below each team member card */
+            transition: transform 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .team-member:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .member-info h3 {
+            margin-top: 10px; /* Margin above the name */
+            font-size: 1.25rem; /* Increase font size */
+        }
+
+        .member-info p {
+            font-style: italic; /* Italicize the job title */
+            color: #6c757d; /* Grey color for job title */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">
+            <img src="./assets/logo.png" alt="logo" style="max-height: 40px;">
+            Y&Y Communications
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="./Example.html">Examples</a></li>
+                <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="team-section">
-            <h2>Meet Our Team</h2>
-            <div class="team-container">
-                <!-- Team Member 1 -->
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="./assets/teammember1.jpg" alt="Team Member 1">
-                    </div>
-                    <div class="member-info">
-                        <h3>John Doe</h3>
-                        <p>CEO & Founder</p>
-                    </div>
-                </div>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>We are a dedicated team of digital marketing professionals focused on delivering innovative solutions to
+                our clients. Our mission is to empower businesses to achieve their goals through strategic online
+                marketing.</p>
 
-                <!-- Team Member 2 -->
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="./assets/teammember2.avif" alt="Team Member 2">
-                    </div>
-                    <div class="member-info">
-                        <h3>Jane Smith</h3>
-                        <p>Marketing Director</p>
-                    </div>
-                </div>
+            <div class="values">
+                <h2>Our Values</h2>
+                <ul>
+                    <li>Integrity</li>
+                    <li>Innovation</li>
+                    <li>Collaboration</li>
+                    <li>Excellence</li>
+                    <li>Customer Focus</li>
+                </ul>
+            </div>
 
-                <!-- Team Member 3 -->
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="./assets/teammember3.png" alt="Team Member 3">
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="row">
+                    <!-- Team Member 1 -->
+                    <div class="col-md-3 text-center">
+                        <div class="member-image">
+                            <img src="./assets/teammember1.jpg" alt="Team Member 1" class="img-fluid" style="width: 150px; height: 200px; border-radius: 75px / 100px; object-fit: cover;">
+                        </div>
+                        <div class="member-info">
+                            <h3>John Doe</h3>
+                            <p>CEO & Founder</p>
+                        </div>
                     </div>
-                    <div class="member-info">
-                        <h3>Mike Johnson</h3>
-                        <p>SEO Specialist</p>
-                    </div>
-                </div>
 
-                <!-- Team Member 4 -->
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="./assets/teammember4.png" alt="Team Member 4">
+                    <!-- Team Member 2 -->
+                    <div class="col-md-3 text-center">
+                        <div class="member-image">
+                            <img src="./assets/teammember2.avif" alt="Team Member 2" class="img-fluid" style="width: 150px; height: 200px; border-radius: 75px / 100px; object-fit: cover;""
+                                style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jane Smith</h3>
+                            <p>Marketing Director</p>
+                        </div>
                     </div>
-                    <div class="member-info">
-                        <h3>Emily Davis</h3>
-                        <p>Content Strategist</p>
+
+                    <!-- Team Member 3 -->
+                    <div class="col-md-3 text-center">
+                        <div class="member-image">
+                            <img src="./assets/teammember3.png" alt="Team Member 3" class="img-fluid" style="width: 150px; height: 200px; border-radius: 75px / 100px; object-fit: cover;"
+                                style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mike Johnson</h3>
+                            <p>SEO Specialist</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="col-md-3 text-center">
+                        <div class="member-image">
+                            <img src="./assets/teammember4.png" alt="Team Member 4" class="img-fluid" style="width: 150px; height: 200px; border-radius: 75px / 100px; object-fit: cover;"
+                                style="width: 150px; height: 150px;">
+                        </div>
+                        <div class="member-info">
+                            <h3>Emily Davis</h3>
+                            <p>Content Strategist</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </body>
+ <!-- Footer Section -->
+ <footer class="bg-light text-center py-4 mt-5">
+    <p>Copyright 2024 © Y&Y Communications</p>
+</footer>
 </html>
